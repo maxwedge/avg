@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #define BUFFER_SIZE 4096
-
+// Display sum and averages of a piped list of numbers
+// 2019-03-31 https://github.com/maxwedge/avg/edit/master/avg.c © David A. Bell
 float findMedian(int medArr[] , int n) {
     int i;
     int compare( const void* a, const void* b) {
