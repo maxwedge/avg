@@ -12,6 +12,7 @@ int compare( const void* a, const void* b) {
     else if ( int_a < int_b ) return -1;
     else return 1;
 }
+
 float findMedian(int medArr[] , int n) {
     int i;
 // Sort the array to determine the median value(s)
@@ -51,7 +52,6 @@ int main(int argc, char *argv[]) {
         case 'h': optH = true; noOpt = false;break;
         case 't': optT = true; noOpt = false;break;
         case 'n': optN = 1; argN = optarg;break;
-
     }
     if (optH) {
         printf("Usage:");
