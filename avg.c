@@ -5,15 +5,15 @@
 #define BUFFER_SIZE 4096
 // Display sum and averages of a piped list of numbers
 // 2019-03-31 https://github.com/maxwedge/avg/edit/master/avg.c © David A. Bell
+int compare( const void* a, const void* b) {
+    int int_a = * ( (int*) a );
+    int int_b = * ( (int*) b );
+    if ( int_a == int_b ) return 0;
+    else if ( int_a < int_b ) return -1;
+    else return 1;
+}
 float findMedian(int medArr[] , int n) {
     int i;
-    int compare( const void* a, const void* b) {
-        int int_a = * ( (int*) a );
-        int int_b = * ( (int*) b );
-        if ( int_a == int_b ) return 0;
-        else if ( int_a < int_b ) return -1;
-        else return 1;
-    }
 // Sort the array to determine the median value(s)
     qsort (medArr, n+1, sizeof(int), compare);
     float median=0;
