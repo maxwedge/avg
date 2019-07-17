@@ -32,9 +32,13 @@
 
                 avg -mdt -n6
 
-        To return the mean average of the 10th column in an access_log file.
+        To return the mean average of the 10th column in an access_log file
 
                 cat /var/log/www/access.log | awk '{print $10}' | avg -m
+
+        Return averages of 100 random numbers from 1 to 1,000
+
+                for i in {1..100};do echo $((1 + RANDOM % 1000));done | avg -a
 
 .SH AUTHOR
         Written by David A. Bell (413@maxwedge.com)
