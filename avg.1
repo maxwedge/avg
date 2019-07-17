@@ -1,0 +1,46 @@
+.TH man 1 "17 July 2019" "1.0" "avg man page"
+
+.SH NAME
+        avg \- display average of numbers
+
+.SH SYNOPSIS
+        avg [OPTIONS]
+
+.SH DESCRIPTION
+        avg is a utility to display mean and median average, count or sum total of numbers from stdin or piped/redirected input.
+
+.SH OPTIONS
+        -c display Count
+
+        -t display Sum Total
+
+        -d display Median Average
+
+        -m display Mean Average
+
+        -a display all options
+
+        -n output precision to n decimal places
+
+        -h this screen
+
+        With no options, the Mean Average is displayed with no legend
+
+.SH EXAMPLES
+
+        To return the mean, median and total of a number series to six decimal points
+
+                avg -mdt -n6
+
+        To return the mean average of the 10th column in an access_log file.
+
+                cat /var/log/www/access.log | awk '{print $10}' | avg -m
+
+.SH AUTHOR
+        Written by David A. Bell (413@maxwedge.com)
+
+.SH COPYRIGHT
+        Copyright © 2019
+        GNU GENERAL PUBLIC LICENSE
+        Version 3, 29 June 2007
+        Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
