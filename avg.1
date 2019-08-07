@@ -28,8 +28,7 @@
 
 .SH EXAMPLES
 
-        To return the mean, median and total of a number series to six decimal points
-
+        To return the mean, median and total of a number series to six decimal places
                 avg -mdt -n6
 
         To return the mean average of the 10th column in an access_log file
@@ -38,8 +37,7 @@
 
         Return averages of 100 random numbers from 1 to 1,000
 
-                for i in {1..100};do echo $((1 + RANDOM % 1000));done | avg -a
-
+                for i in {1..100};do echo $((1 + RANDOM % 1000));done | avg -an 4
 .SH AUTHOR
         Written by David A. Bell (413@maxwedge.com)
 
